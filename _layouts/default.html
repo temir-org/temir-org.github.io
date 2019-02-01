@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>{{ page.title }}</title>
+    <meta charset="utf-8">
+    <meta name="description" content="{{ page.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="copyright" content="&copy; {{site.time | date: '%Y'}} Webis">
+    <link rel="icon" type="image/png" href="{{ '/img/favicon.png' | relative_url }}">
+
+    <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}?{{site.time | date: '%s'}}">
+    {%- for css in page.additional_css %}
+    <link rel="stylesheet" href="{{ css | relative_url }}?{{site.time | date: '%s'}}">
+    {%- endfor %}
+</head>
+<body class="uk-offcanvas-content">
+<script src="{{ '/commons/js/thirdparty/uikit/uikit.min.js' | relative_url }}"></script>
+<script src="{{ '/commons/js/thirdparty/uikit/uikit-icons.min.js' | relative_url }}"></script>
+
+<div id="offcanvas-nav" class="mobile-nav" data-uk-offcanvas="overlay: true; flip: true;">
+    <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" data-uk-close></button>
+
+        <!-- Off-canvas mobile navigation -->
+        <nav class="uk-margin-large-top">
+            <ul class="uk-nav uk-nav-primary uk-nav-parent-icon" data-uk-nav>
+                <li{% if page.nav_active == "people" %} class="uk-active"{% endif %}>
+                    <a href="{{ '/people.html' | relative_url }}">People</a>
+                </li>
+                <!-- <li{% if page.nav_active == "for-students" %} class="uk-active"{% endif %}>
+                    <a href="{{ '/for-students.html' | relative_url }}">For&nbsp;Students</a>
+                </li> -->
+                <li{% if page.nav_active == "lecturenotes" %} class="uk-active"{% endif %} class="uk-parent">
+                    <a href="#">Lecturenotes</a>
+                    <ul class="uk-nav-sub">
+                        <li><a href="{{ '/lecturenotes/overview.html' | relative_url }}">Overview</a></li>
+                        <li><a href="{{ '/lecturenotes/slides.html' | relative_url }}">Slides</a></li>
+                        <li class="uk-parent">
+                            Browser
+                            <ul class="uk-nav-sub">
+                                <li><a href="{{ '/lecturenotes/browser/algorithms-and-datastructures.html' | relative_url }}">Algorithmen und Datenstrukturen</a></li>
+                                <li><a href="{{ '/lecturenotes/browser/information-retrieval.html' | relative_url }}">Information Retrieval</a></li>
+                                <li><a href="{{ '/lecturenotes/browser/lecturenotes-generic.html' | relative_url }}">Lecturenotes Generic</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li{% if page.nav_active == "research" %} class="uk-active"{% endif %}>
+                    <a href="{{ '/research.html' | relative_url }}">Research</a>
+                </li>
+                <li{% if page.nav_active == "publications" %} class="uk-active"{% endif %}>
+                    <a href="{{ '/publications.html' | relative_url }}">Publications</a>
+                </li>
+                <li{% if page.nav_active == "data" %} class="uk-active"{% endif %}>
+                    <a href="{{ '/data.html' | relative_url }}">Data</a>
+                </li>
+                <li{% if page.nav_active == "facilities" %} class="uk-active"{% endif %}>
+                    <a href="{{ '/facilities.html' | relative_url }}">Facilities</a>
+                </li>
+                <li{% if page.nav_active == "events" %} class="uk-active"{% endif %}>
+                    <a href="{{ '/events.html' | relative_url }}">Events</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<div class="uk-background-secondary global-nav" data-uk-sticky>
+    <nav class="uk-navbar-container uk-navbar-transparent uk-container uk-light" data-uk-navbar="mode: click">
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+                <li{% if page.nav_active == "index" %} class="uk-active"{% endif %}>
+                    <a href="{{ '/' | relative_url }}"><img src="{{ '/img/webis-logo.png' | relative_url }}" alt="Webis Logo" class="uk-logo">Temir</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Mobile navigation toggle button -->
+        <div class="uk-navbar-right mobile-nav">
+            <button class="uk-button uk-navbar-item uk-light uk-button-large" type="button" data-uk-icon="icon: menu"
+                    data-uk-toggle="target: #offcanvas-nav"></button>
+        </div>
+
+        <!-- Desktop navigation -->
+        <div class="uk-navbar-right desktop-nav">
+            <ul class="uk-navbar-nav">
+                <li{% if page.nav_active == "people" %} class="uk-active"{% endif %}>
+                <a href="{{ '/people.html' | relative_url }}">People</a>
+                </li>
+                <!-- <li class="{% if page.nav_active == 'for-students' %} uk-active{% endif %}">
+                    <a href="{{ '/for-students.html' | relative_url }}">For&nbsp;Students</a>
+                </li> -->
+                <li class="nav-group-start{% if page.nav_active == 'lecturenotes' %} uk-active{% endif %}">
+                    <a href="#">Lecturenotes</a>
+
+                    <div class="uk-navbar-dropdown uk-navbar-dropdown-width-3 uk-padding-remove">
+                        <div class="uk-navbar-dropdown-grid" data-uk-grid>
+                            <div class="uk-width-1-3">
+                                <ul class="uk-nav uk-navbar-dropdown-nav uk-padding-small">
+                                    <li><a href="{{ '/lecturenotes/overview.html' | relative_url }}">Overview</a></li>
+                                    <li><a href="{{ '/lecturenotes/slides.html' | relative_url }}">Slides</a></li>
+                                    <li class="nav-left-open-category">Browser</li>
+                                </ul>
+                            </div>
+                            <div class="uk-width-2-3">
+                                <ul class="uk-nav uk-navbar-dropdown-nav nav-right-open-sub uk-padding-small">
+                                    <li><a href="{{ '/lecturenotes/browser/algorithms-and-datastructures.html' | relative_url }}">Algorithmen und Datenstrukturen</a></li>
+                                    <li><a href="{{ '/lecturenotes/browser/information-retrieval.html' | relative_url }}">Information Retrieval</a></li>
+                                    <li><a href="{{ '/lecturenotes/browser/lecturenotes-generic.html' | relative_url }}">Lecturenotes Generic</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li{% if page.nav_active == "research" %} class="uk-active"{% endif %}>
+                <a href="{{ '/research.html' | relative_url }}">Research</a>
+                </li>
+                <li{% if page.nav_active == "publications" %} class="uk-active"{% endif %}>
+                <a href="{{ '/publications.html' | relative_url }}">Publications</a>
+                </li>
+                <li class="nav-group-start{% if page.nav_active == 'data' %} uk-active{% endif %}">
+                    <a href="{{ '/data.html' | relative_url }}">Data</a>
+                </li>
+                <li{% if page.nav_active == "facilities" %} class="uk-active"{% endif %}>
+                <a href="{{ '/facilities.html' | relative_url }}">Facilities</a>
+                </li>
+                <li{% if page.nav_active == "events" %} class="uk-active"{% endif %}>
+                <a href="{{ '/events.html' | relative_url }}">Events</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div data-uk-height-viewport="expand: true">
+{{ content }}
+</div>
+
+<footer class="uk-section uk-section-muted footer-section">
+    <div class="uk-container">
+        <div class="uk-grid uk-grid-small" data-uk-grid>
+            <div class="uk-text-muted uk-text-small search-engines uk-width-1-3@s uk-width-1-5@m">
+
+                <h4>Search Engines</h4>
+                <div>
+                    <div class="uk-grid uk-grid-small uk-margin-bottom" data-uk-grid>
+                        <div class="uk-width-auto search-engine-icon">
+                            <a href="https://www.chatnoir.eu/" class="uk-link-reset"><img alt="ChatNoir" src="/research/img/chatnoir2-logo.png"></a>
+                        </div>
+                        <div class="uk-width-expand">
+                            <h5><a href="https://www.chatnoir.eu/" class="uk-link-heading">ChatNoir</a></h5>
+                            <div class="uk-text-small">Web search</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-grid uk-grid-small uk-margin-bottom" data-uk-grid>
+                        <div class="uk-width-auto search-engine-icon">
+                            <a href="https://www.chatnoir.eu/" class="uk-link-reset"><img alt="Netspeak" src="/research/img/netspeak-logo.png"></a></div>
+                        <div class="uk-width-expand">
+                            <h5><a href="http://netspeak.org/" class="uk-link-heading">Netspeak</a></h5>
+                            <div class="uk-text-small">Writing assistance</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-grid uk-grid-small uk-margin-bottom" data-uk-grid>
+                        <div class="uk-width-auto search-engine-icon">
+                            <a href="http://picapica.org/" class="uk-link-reset"><img alt="Picapica" src="/research/img/picapica-logo.png"></a>
+                        </div>
+                        <div class="uk-width-expand">
+                            <h5><a href="http://picapica.org/" class="uk-link-heading">Picapica</a></h5>
+                            <div class="uk-text-small">Plagiarism detection</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Contact</h4>
+                <address>
+                        Text Mining and Retrieval Group, <br>
+                        Leipzig University, <br>
+                        Department of Computer Science, <br>
+                        Augustusplatz 10, <br>
+                        04109 Leipzig, <br>
+                        Germany  <br>
+                        <span uk-icon="world"></span>&nbsp; <a href="temir.org">www.temir.org</a><br>
+                        <span uk-icon="receiver"></span>&nbsp;+49 341 97-32230
+                </address>
+            </div>
+        
+        </div>
+
+        <div class="uk-align-right@m uk-margin-top">
+            Copyright &copy; {{site.time | date: '%Y'}} Temir Group <span class="uk-padding-small">&bullet;</span>
+            <a href="#">Contact</a> <span class="uk-padding-small">&bullet;</span>
+            <a href="#">Privacy</a> <span class="uk-padding-small">&bullet;</span>
+            <a href="#">Legal Info / Impressum</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    UIkit.util.ready(() => {
+        const nav = UIkit.util.$(".global-nav");
+        const navHeight = UIkit.util.height(nav);
+
+        // correct scroll offset due to fixed navigation after page load
+        let fixScrollHeight = () => {
+            if (location.hash === "" || !UIkit.util.$(location.hash)) {
+                return;
+            }
+
+            const pos = document.documentElement.scrollTop;
+            const offset = UIkit.util.offset(UIkit.util.$(location.hash));
+
+            if (pos > navHeight * .8 && offset) {
+                document.documentElement.scrollTop = offset.top - navHeight - 20;
+            }
+        };
+
+        window.addEventListener("hashchange", fixScrollHeight, false);
+        setTimeout(fixScrollHeight, 100);
+    });
+</script>
+
+</body>
+</html>

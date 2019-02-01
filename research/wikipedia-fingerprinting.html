@@ -1,0 +1,98 @@
+---
+layout: default
+nav_active: research
+title: Webis Research Wikipedia Fingerprinting
+description: Overview of research that are used by the Webis research group
+---
+
+<script type="application/ld+json">
+{
+  "@context":"http://schema.org/",
+  "@type":"Research",
+  "name":"Wikipedia Fingerprinting",
+  "description":"",
+  "url":"https://webis.de/research/wikipedia-fingerprinting.html",
+  "keywords":[
+    "Wikipedia Fingerprinting"
+  ], 
+  "creator":[
+    {
+      "@type":"Organization",
+      "url":"https://webis.de/",
+      "name":"The Web Technology & Information Systems Network",
+      "alternateName":"Webis"
+    },
+    {
+        "@type":"Person", 
+        "url":"http://www.uni-weimar.de/medien/webis/people/#stein",
+        "affiliation":"Bauhaus-Universit\u00e4t Weimar", 
+        "name":"Stein, Benno"
+    },
+    {
+        "@type":"Person", 
+        "url":"http://www.uni-weimar.de/medien/webis/people/#potthast",
+        "affiliation":"Bauhaus-Universit\u00e4t Weimar", 
+        "name":"Potthast, Martin"
+    }
+  ],
+  "includedInDataCatalog":{
+  },
+  "distribution":[
+  ]
+}
+</script>
+
+<main class="uk-section uk-section-default">
+    <div class="uk-container">
+        <h1>Wikipedia Fingerprinting</h1>
+
+        <ul class="uk-list">
+            <!-- Comment out sections you do not provide -->
+            <li><span data-uk-icon="chevron-down"></span> <a href="#synopsis">Synopsis</a></li>
+            <li><span data-uk-icon="chevron-down"></span> <a href="#research">Research</a></li>
+            <li><span data-uk-icon="chevron-down"></span> <a href="#people">People</a></li>
+            <li><span data-uk-icon="chevron-down"></span> <a href="#publications">Publications</a></li>
+        </ul>
+    </div>
+
+    <div class="uk-container uk-margin-medium">
+        <!--
+        SECTION Synopsis
+        -->
+        <h2 id="synopsis">Synopsis</h2>
+
+        <p>In this project we develop and implement a new&nbsp;indexing technology which allows us to use complete (and possibly very large) documents as queries,&nbsp;while having&nbsp;a&nbsp;retrieval&nbsp;performance comparable to a standard term query. Our approach provides a powerful technology for retrieval tasks such as plagiarism analysis, near-duplicate detection, and high similarity search. To demonstrate the performance of our technology we have compiled&nbsp;the search index &quot;Wikipedia in the Pocket&quot;, which contains&nbsp;about 1.5 million English Wikipedia articles and 0.5 million German articles. This index - along with a search interface and a servlet engine -&nbsp;fits&nbsp;on a conventional CD (0.7 gigabyte).</p>
+
+        <!--
+        SECTION Research
+        -->
+        <h2 id="research">Research</h2>
+
+        <p>The ingredients of our indexing technology are similarity hashing and minimal perfect hashing. With respect to the former we have developed a new kind of tolerant (&quot;fuzzy&quot;) hashcodes for larger portions of text (50-1000 words). Fuzziness is introduced by generalizing divergence properties of a document's terms as a small set of parameters, which in turn are encoded as - what is here called - fingerprint. The probability that the fingerprints of two documents are equal is close to one for documents with a high cosine similarity.</p>
+<p>Fuzzy hashcodes of indexed documents are mapped to memory positions, which point to a postlist referencing all documents associated with the hashcode in question. An optimal solution for this problem is a hash function which (i) maps all keys without hash collisions to the available memory positions, and (ii) has an upper bound for the average number of additional positions needed to ensure the first property. A hash function with the first property is called perfect; moreover, it is called minimal if the second property's upper bound is a small constant. For a previously known set of keys, minimal perfect hash functions can be constructed&nbsp;in linear time and space. This prerequisite is fulfilled for Wikipedia in the Pocket because all documents to be indexed are known in advance. We call this a half-open retrieval situation.</p>
+
+        <!--
+        SECTION People
+        -->
+        <h2 id="people">People</h2>
+        <ul>
+	    <li><a href="http://www.uni-weimar.de/medien/webis/people/#potthast" title="Martin Potthast">Martin Potthast</a></li>
+	    <li><a href="http://www.uni-weimar.de/medien/webis/people/#stein" title="Benno Stein">Benno Stein</a></li>
+	</ul>
+	
+	<p>Students: Dennis Hoppe, Martin Trenkmann</p>
+
+	<!--
+	SECTION Publications
+	-->
+	<h2 id="publications">Publications</h2>
+        <div id="publications-list">
+        </div>
+	</div>
+        </div>
+</main>
+
+<script src="https://webis.de/js/bibentry.js"></script>
+<script>
+includeBibentries(document.getElementById("publications-list"), "projects:wikipedia-fingerprinting");
+</script>

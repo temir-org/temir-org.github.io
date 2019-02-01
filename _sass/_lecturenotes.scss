@@ -1,0 +1,166 @@
+.lecturenotes-collection {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='utf-8'?%3E%3C!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 43363) --%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='100px' height='100px' viewBox='0 0 100 100' enable-background='new 0 0 100 100' xml:space='preserve'%3E%3Crect x='0.5' y='0.5' fill='%23F2F2F2' stroke='%23FFFFFF' width='99' height='99'/%3E%3C/svg%3E");
+
+    li {
+        color: $text-lead-color;
+        font-size: $global-small-font-size;
+        width: 98px;
+        height: 98px;
+        border: 1px solid white;
+        display: flex;
+
+        a, span {
+            display: flex;
+            padding: 4px;
+            width: 100px;
+            color: inherit !important;
+            text-align: center;
+            justify-content: center; // align horizontally
+            align-items: center; // align vertically
+        }
+    }
+
+    .lecturenotes-collection {
+        font-weight: bold;
+        background: rgb(192, 192, 192);
+    }
+
+    .empty {
+        color: $text-muted-color;
+    }
+}
+
+#lecturenotes-coursetable {
+    .ads .part {
+        background: rgb(142, 202, 245);
+    }
+
+    .search .part {
+        background: rgb(161, 196, 131);
+    }
+
+    .logics .part {
+        background: rgb(178, 217, 144);
+    }
+
+    .mk .part {
+        background: rgb(206, 222, 191);
+    }
+
+    .db .part {
+        background: rgb(142, 202, 245);
+    }
+
+    .ml .part {
+        background: rgb(247, 234, 123);
+    }
+
+    .dm .part {
+        background: rgb(253, 219, 96);
+    }
+
+    .ir .part {
+        background: rgb(246, 231, 184);
+    }
+
+    .web .part {
+        background: rgb(162, 155, 224);
+    }
+
+    .tools .part {
+        background: rgb(233, 161, 119);
+    }
+
+    .generic .part {
+        background: rgb(255, 255, 255);
+    }
+
+    .part:hover:not(.empty) {
+        filter: brightness(1.05);
+    }
+
+    // resize to fit ul.collection to contain li elements without additional space
+    // li width steps with tolerance for .container padding and scroll bar
+    @media (min-width: 120px) {
+        ul {
+            width: 100px;
+        }
+    }
+
+    @media (min-width: 220px) {
+        ul {
+            width: 200px;
+        }
+    }
+
+    @media (min-width: 320px) {
+        ul {
+            width: 300px;
+        }
+    }
+
+    @media (min-width: 420px) {
+        ul {
+            width: 400px;
+        }
+    }
+
+    @media (min-width: 520px) {
+        ul {
+            width: 500px;
+        }
+    }
+
+    // UIkit width steps
+    @media (min-width: $breakpoint-small) {
+        ul {
+            width: 600px;
+        }
+    }
+
+    @media (min-width: $breakpoint-medium) {
+        ul {
+            width: 900px;
+        }
+    }
+
+    @media (min-width: $breakpoint-large) {
+        ul {
+            width: 1100px;
+        }
+    }
+
+    // selection
+    .halle li:not(.halle),
+    .leipzig li:not(.leipzig),
+    .paderborn li:not(.paderborn),
+    .passau li:not(.passau),
+    .weimar li:not(.weimar),
+    .bachelor ul:not(.bachelor) li,
+    .master ul:not(.master) li {
+        background: rgb(210, 210, 210);
+        color: rgb(120, 120, 120);
+        filter: brightness(1);
+    }
+}
+
+#lecturenotes-slides {
+    .date {
+        width: 1%;
+    }
+
+    .links {
+        width: 65px;
+        text-align: right;
+    }
+
+    .table .placeholder {
+        color: rgba(0, 0, 0, 0);
+        cursor: default;
+    }
+}

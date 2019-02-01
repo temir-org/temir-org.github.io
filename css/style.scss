@@ -1,0 +1,21 @@
+---
+# Front matter to ensure Jekyll is processing the file.
+---
+
+// Variable overrides
+@import "../_sass/variables";
+
+// Webis styles
+@import "../commons/_sass/main";
+@import "../commons/_sass/prettyprint";
+@import "../commons/_sass/_data_tables";
+
+// Custom styles
+@import "../_sass/index";
+@import "../_sass/lecturenotes";
+@import "../_sass/nosql_databases";
+@import "../_sass/retrieval-models";
+@import "../_sass/aitools";
+@import "../_sass/tira";
+@import "../_sass/person_resolution";
+
