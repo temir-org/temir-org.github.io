@@ -7,8 +7,7 @@
     <meta name="description" content="{{ page.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="copyright" content="&copy; {{site.time | date: '%Y'}} Temir">
-    <link rel="icon" type="image/png" href="{{ '/img/favicon.png' | relative_url }}">
-
+    <link rel="icon" type="image/png" href="{{ '/img/uni-leipzig-favicon.png' | relative_url }}">
     <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}?{{site.time | date: '%s'}}">
     {%- for css in page.additional_css %}
     <link rel="stylesheet" href="{{ css | relative_url }}?{{site.time | date: '%s'}}">
@@ -77,8 +76,7 @@
                 <ul class="uk-navbar-nav">
                     <li {% if page.nav_active=="index" %} class="uk-active" {% endif %}>
                     
-                        <a href="{{ '/' | relative_url }}"><img src="{{ '/img/webis-logo.png' | relative_url }}" alt="Temir Logo"
-                                class="uk-logo">Temir</a>
+                        <a class="uk-position-left" href="{{ '/' | relative_url }}">Temir</a>
                     </li>
                 </ul>
             </div>
