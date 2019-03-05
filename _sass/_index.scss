@@ -1,37 +1,37 @@
 // Index page
 
 .index-main-cover {
-    // background: $global-secondary-background url("../img/index-cover-optimized.jpg") no-repeat center center fixed;
-    background-size: cover;
+    background: $global-secondary-background url("../img/index-cover.png") no-repeat center center fixed;
+    background-size: 55%;
     background-color: #ffffff;
     height: 450px;
-    font-size: 1.05rem;
+    font-size: 1.25rem;
+    
 
     h1 {
         font-size: 2.65rem;
     }
 }
 
-.cover-background-fade {
-    @extend .uk-position-cover;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.85) 85%);
-}
+
 
 @media (max-width: 400px) {
     .index-main-cover {
         height: 550px;
+        background-size: 30%;
     }
 }
 
 @media (max-width: 300px) {
     .index-main-cover {
         height: 600px;
+        background-size: 25%;
     }
 }
 
 @media (min-width: $breakpoint-medium) {
     .index-main-cover {
-        height: 50vh;
+        height: 75vh;
     }
 }
 
