@@ -100,6 +100,7 @@ svg.text-logo text {
     & > li > a {
         .uk-light & {
             color: rgba(255, 255, 255, .75);
+            font-size: 1.15rem;
 
             &:hover, &:focus, &.uk-open[aria-expanded] {
                 color: #fff;
@@ -164,14 +165,6 @@ svg.text-logo text {
         right: -($padding-small-padding) - 1;
     }
 
-    // comment in for triangle in navigation
-    //&:before {
-    //    border-left: floor(($global-line-height * 16px + $list-margin-top) / 2) + 2 solid $global-border;
-    //    border-top: floor(($global-line-height * 16px + $list-margin-top) / 2) + 2 solid transparent;
-    //    border-bottom: floor(($global-line-height * 16px + $list-margin-top) / 2) + 2 solid transparent;
-    //    top: -1px;
-    //    right: -($padding-small-padding) - 2;
-    //}
 }
 
 .nav-right-open-sub {
