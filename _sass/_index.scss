@@ -6,15 +6,25 @@
     background-color: #ffffff;
     height: 450px;
     font-size: 1.25rem;
-    
 
     h1 {
         font-size: 2.65rem;
     }
 }
 
+.uni-logo{
+    float: left;
+    width: 50%;
 
-
+}
+.temir-logo{
+    float: left;
+    width: 50%;
+}
+.global-nav{
+    height: auto!important;
+    margin-bottom: 10px;
+}
 @media (max-width: 400px) {
     .index-main-cover {
         height: 550px;
