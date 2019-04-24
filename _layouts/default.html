@@ -28,17 +28,17 @@
                     <li{% if page.nav_active == "people" %} class="uk-active" {% endif %}>
                         <a href="{{ '/people.html' | relative_url }}">People</a>
                         </li>
-                        <li{% if page.nav_active == "for-students" %} class="uk-active" {% endif %}>
+                        <!-- <li{% if page.nav_active == "for-students" %} class="uk-active" {% endif %}>
                             <a href="{{ '/for-students.html' | relative_url }}">For&nbsp;Students</a>
-                            </li>
+                            </li> -->
                             <li{% if page.nav_active == "lecturenotes" %} class="uk-active" {% endif %}>
-                                <a href="{{ '/lecturenotes.html' | relative_url }}">Lecturenotes</a>
+                                    <a href="https://webis.de/lecturenotes.html">Lecturenotes</a>
                                 </li>
                                 <li{% if page.nav_active == "research" %} class="uk-active" {% endif %}>
                                     <a href="{{ '/research.html' | relative_url }}">Research</a>
                                     </li>
                                     <li{% if page.nav_active == "publications" %} class="uk-active" {% endif %}>
-                                        <a href="{{ '/publications.html' | relative_url }}">Publications</a>
+                                            <a href="https://webis.de/publications.html#filter:martin+potthast">Publications</a>
                                         </li>
                                         <li{% if page.nav_active == "data" %} class="uk-active" {% endif %}>
                                             <a href="{{ '/data.html' | relative_url }}">Data</a>
@@ -56,15 +56,13 @@
 
     <div class="uk-background-secondary global-nav" data-uk-sticky>
         <nav class="uk-navbar-container uk-navbar-transparent uk-light" data-uk-navbar="mode: click">
-            <div class="uk-navbar-left">
-                <a href="{{ '/' | relative_url }}" class="uk-navbar-item uk-active" id="group-logo">TEMIR</a>
-                <!-- <ul class="uk-navbar-nav">
-                     <li>
-                        <a href="https://www.uni-leipzig.de/"> <img src="{{'/img/uni-leipzig-logo.jpg'}}"
-                                alt="Uni-Leipzig Logo"></a>
-
-                    </li> 
-                </ul> -->
+            <div class="uk-flex  uk-child-width-expand" uk-grid-small>
+                <div class=" uk-visible@m uk-visible@l uk-width-auto@m uk-width-2-5@l">
+                    <a href="https://www.uni-leipzig.de/"><img src="/img/uni-leipzig-logo.jpg" alt="Uni-Leipzig Logo"></a>
+                </div>
+                <div class="uk-width-auto@s  uk-width-auto@m uk-width-1-5@l">
+                        <a href="{{ '/' | relative_url }}" class="uk-navbar-item uk-active" id="group-logo">TEMIR</a>
+                </div>
             </div>
 
             <!-- Mobile navigation toggle button -->
