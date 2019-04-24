@@ -1,5 +1,16 @@
 // Index page
 
+#group-logo{
+    font-size: large;
+    font-weight: 300;
+    color: white;
+}
+
+#group-logo:hover{
+ text-decoration: none;
+ font-weight: bold;
+}
+
 .global-nav{
     height: auto!important;
     margin-bottom: 10px;
