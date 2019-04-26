@@ -69,7 +69,6 @@ svg.text-logo text {
 .global-nav {
     
     border-bottom: 1px solid lighten($global-secondary-background, 25);
-    height: 13rem;
 
     .uk-logo {
         height: 1.9rem;
@@ -77,11 +76,11 @@ svg.text-logo text {
     }
 
     .uk-navbar-nav li:first-child > a {
-        padding-right: 0;
+        padding-left: 0;
     }
 
     .uk-navbar-nav li:last-child > a {
-        padding-left: 0;
+        padding-right: 0;
     }
 }
 .desktop-nav {

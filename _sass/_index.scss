@@ -8,28 +8,36 @@
 #group-logo:hover{
  text-decoration: none;
 }
+.index-main-cover {
+    background: white url("../img/index-cover.png") no-repeat top center fixed;
+    background-size: cover;
+    height: 450px;
+    font-size: 1.05rem;
 
-.global-nav{
-    height: auto!important;
-    margin-bottom: 10px;
+    h1 {
+        font-size: 2.65rem;
+    }
+}
+
+.cover-background-fade {
+    @extend .uk-position-cover;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.6) 90%);
 }
 @media (max-width: 400px) {
     .index-main-cover {
         height: 550px;
-        background-size: 30%;
     }
 }
 
 @media (max-width: 300px) {
     .index-main-cover {
         height: 600px;
-        background-size: 25%;
     }
 }
 
 @media (min-width: $breakpoint-medium) {
     .index-main-cover {
-        height: 75vh;
+        height: 50vh;
     }
 }
 
