@@ -68,12 +68,12 @@ svg.text-logo text {
 
 .global-nav {
     
-   // border-bottom: 1px solid lighten($global-secondary-background, 25);
+    border-bottom: 1px solid lighten($global-secondary-background, 25);
     height: 13rem;
 
     .uk-logo {
-        height: 100%;
-        float: left;
+        height: 1.9rem;
+        padding-right: 15px;
     }
 
     .uk-navbar-nav li:first-child > a {
@@ -101,7 +101,6 @@ svg.text-logo text {
     & > li > a {
         .uk-light & {
             color: rgba(255, 255, 255, .75);
-            font-size: 1.15rem;
 
             &:hover, &:focus, &.uk-open[aria-expanded] {
                 color: #fff;

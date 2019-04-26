@@ -18,7 +18,7 @@ $global-large-font-size: 1.2rem;
 
 // Colours
 $base-link-color: #0645ad;
-$base-link-hover-color: lighten($base-link-color, 20);
+$base-link-hover-color: $base-link-color;
 $base-selection-background: #1c79cc;
 $table-header-target-color: #d9e7f7;
 
