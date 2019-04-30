@@ -8,15 +8,14 @@
 #group-logo:hover{
  text-decoration: none;
 }
-.index-main-cover {
-    background: white url("../img/index-cover.png") no-repeat top center fixed;
-    background-size: cover;
-    height: 450px;
-    font-size: 1.05rem;
 
-    h1 {
-        font-size: 2.65rem;
-    }
+#uni-logo-div{
+    margin-left: -30px;
+
+}
+
+.cover-div{
+    padding: 10px;
 }
 
 .cover-background-fade {
