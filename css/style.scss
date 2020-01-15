@@ -2,20 +2,14 @@
 # Front matter to ensure Jekyll is processing the file.
 ---
 
-// Variable overrides
-@import "../_sass/variables";
+@import url("https://assets.webis.de/css/style.css?{{site.time | date: '%s'}}");
 
-// Webis styles
-@import "../commons/_sass/main";
-@import "../commons/_sass/prettyprint";
-@import "../commons/_sass/_data_tables";
+// Variable overrides
+@import "../_sass/_variables.scss";
 
 // Custom styles
 @import "../_sass/index";
-@import "../_sass/lecturenotes";
-@import "../_sass/nosql_databases";
-@import "../_sass/retrieval-models";
-@import "../_sass/aitools";
-@import "../_sass/tira";
-@import "../_sass/person_resolution";
 
+.uk-background-secondary{
+    background-color: #B02F2C !important;
+}
