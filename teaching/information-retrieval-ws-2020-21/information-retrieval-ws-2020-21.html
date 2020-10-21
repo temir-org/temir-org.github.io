@@ -258,7 +258,87 @@ description: Course page of Advanced Information Retrieval
       </li>
  -->
     </ul>
-        <h2 id="lab-project">Lab Project</h2>
-    <p class="uk-text-left">To be announced.</p>
+    <h2 id="lab-project">Lab Project</h2>
+    <p class="uk-text-left">
+      The lab consists of building and evaluating an information system for a specific domain. This entails related work search, data cleansing, indexing, selection and implementation of suitable retrieval models, evaluation of search quality, and the submission of a written report and well-documented source code.
+    </p>
+    <!--
+    <h3 id="lab-lecturenotes">Lab Lecturenotes</h3>
+    <ul class="uk-list uk-list-bullet">
+      <li><a href="https://webis.de/lecturenotes.html#lecturenotes-generic">Lecturenotes Generic</a> » 
+        <a href="https://webis.de/lecturenotes.html#part-scientific-toolbox">Scientific Toolbox</a> » 
+        <a href="https://webis.de/lecturenotes.html#unit-en-literature-research">Literature Research</a>
+        [<a href="https://www.youtube.com/watch?v=tUfNyzvTha8&list=PLgD1TOdHQCI-MThaS0cj1gLhG2HR40NkM&index=1">video 1</a>]
+      </li>
+      <li><a href="https://webis.de/lecturenotes.html#lecturenotes-generic">Lecturenotes Generic</a> » 
+        <a href="https://webis.de/lecturenotes.html#part-scientific-toolbox">Scientific Toolbox</a> » 
+        <a href="https://webis.de/lecturenotes.html#unit-en-oral-presentations">Oral Presentations</a>
+        [<a href="https://www.youtube.com/watch?v=SnPk5E3UI_k&list=PLgD1TOdHQCI-MThaS0cj1gLhG2HR40NkM&index=2">video 2</a>]
+      </li>
+      <li><a href="https://webis.de/lecturenotes.html#lecturenotes-generic">Lecturenotes Generic</a> » 
+        <a href="https://webis.de/lecturenotes.html#part-scientific-toolbox">Scientific Toolbox</a> » 
+        <a href="https://webis.de/lecturenotes.html#unit-en-scientific-writing">Scientific Writing</a>
+        [<a href="https://www.youtube.com/watch?v=vpQfAS1lCuU&list=PLgD1TOdHQCI-MThaS0cj1gLhG2HR40NkM&index=3">video 3</a>]
+      </li>
+      <li>Information Retrieval » Practical Sessions » <a href="https://events.webis.de/touche-20/tira-guide-task-1.html">Introduction to Tira.io</a> [<a href="https://www.youtube.com/watch?v=Wa2au1EvUJQ">video 4</a>] [<a href="https://git.webis.de/code-teaching/readings/information-retrieval-ss20-leipzig/-/tree/master/Tira%20Tutorial">material</a>]
+      </li>
+    </ul>
+    <h3 id="lab-classes">Lab classes</h3>
+    <ul class="uk-list uk-list-bullet">
+      <li>2020-11-03. Introduction. [<a href="https://events.webis.de/touche-20/shared-task-1.html">shared task</a>] (you do <b>not</b> need to register) [<a href="tutorials-en-information-retrieval-intro.pdf">slides</a>] [<a href="https://www.youtube.com/watch?v=XFGKrKKL_zA">video</a>]</li>
+    </ul>
+    <h3>Lab Material</h3>
+    <ul class="uk-list uk-list-striped">
+      <li><b>Literature</b>
+        <ul class="uk-list uk-list-bullet">
+          <li>Wachsmuth et al. <i>Building an Argument Search Engine for the Web</i> (ArgMining 2017). [<a href="https://webis.de/publications.html#stein_2017r">link</a>]</li>
+          <li>Ajjour et al. <i>Data Acquisition for Argument Search: The args.me corpus.</i> (KI 2019). [<a href="https://webis.de/publications.html#stein_2019q">link</a>]</li>
+          <li>Potthast et al. <i>Argument Search: Assessing Argument Relevance.</i> (SIGIR 2019). [<a href="https://webis.de/publications.html#stein_2019k">link</a>]</li>
+          <li>Wachsmuth et al. <i>Computational Argumentation Quality Assessment in Natural Language.</i> (EACL 2017). [<a href="https://webis.de/publications.html#stein_2017c">link</a>]</li>
+          <li>Bondarenko et al. <i>Touché: First Shared Task on Argument Retrieval.</i> (ECIR 2020). [<a href="https://webis.de/publications.html#stein_2020c">link</a>]</li>
+        </ul>
+      </li>
+      <li><b>Data</b>
+        <ul class="uk-list uk-list-bullet">
+          <li>Source corpus of ~380.000 arguments [<a href="https://webis.de/data/args-me-corpus.html">link</a>] (use "latest")</li>
+          <li>Training, evaluation and query data [<a href="https://git.webis.de/code-teaching/readings/information-retrieval-ws20-leipzig">link</a>]</li>
+        </ul>
+      </li>
+      <li><b>Example</b>
+        <ul class="uk-list uk-list-bullet">
+          <li>Demo: [<a href="https://www.args.me/">args.me</a>]</li>
+          <li>Source: [<a href="https://git.webis.de/code-research/arguana/args/args-framework">Git</a>]</li>
+          <li>Note that you do <b>not</b> need to implement a frontend in the lab. Your system only has to interact with Tira. Informations on Tira will be given in a dedicated lab session.</li>
+        </ul>
+      </li>
+    </ul>
+    <h3 id="lab-report">Lab Report</h2>
+    <p class="uk-text-left">
+        A written report is expected at the end of the semester. Note that since we are not able to conduct a written exam this semester, grades will be based only the lab report. Detailed information on whats expected of the report can be found below.
+    </p>
+    <ul class="uk-list uk-list-bullet">
+      <li> <b>Language:</b> English or German </li>
+      <li> <b>Structure:</b>
+        <ol class="uk-list">
+            <li> Introduction </li>
+            <li> Related Work </li>
+            <li> Argument Retrieval Model(s) (i.e., a description of your contribution)</li>
+            <li> Evaluation </li>
+            <li> Discussion and Conclusion </li>
+        </ol>
+      </li>
+      <li> <b>Style:</b> please use Springer LNCS as template for your report [<a href="https://www.overleaf.com/latex/templates/springer-lecture-notes-in-computer-science/kzwwpvhwnvfj">Overleaf Template</a>] [<a href="ftp://ftp.springernature.com/cs-proceeding/llncs/word/splnproc1703.zip">Word Template</a>] [<a href="ftp://ftp.springernature.com/cs-proceeding/llncs/llncs2e.zip">Latex Template</a>]
+      </li>
+      <li> <b> Length: </b> minimum 10 pages.
+      <li> <b>Supplementary Material:</b>  
+        <ul class="uk-list uk-list-bullet">
+          <li>your source code in a git repository with full commit history</li>
+          <li>a working deployment of your system on the Tira platform </li>
+        </ul>
+      </li>
+      <li> <b> Due Date: </b> reports have to be turned in on <b>31.08.2020</b></li>
+      <li> <b> Talk: </b> in addition to the report, we will have short (~20min + questions) talks with each group at the end of the semester. Each person of the group should have their fair share of talking and the talk should cover all important aspects of your approach. </li>
+    </ul>
+    -->
   </div>
 </main>
