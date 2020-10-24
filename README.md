@@ -1,6 +1,6 @@
-# Webis Website
+# Temir Website
 
-The Webis website source code.
+The Temir website source code.
 
 ## Building The Source Code
 
@@ -14,7 +14,7 @@ The website is built using [Jekyll](https://jekyllrb.com/docs/). To install
 Jekyll on your system, run
 
     sudo apt install ruby ruby-dev build-essential
-    sudo gem install jekyll jekyll-sitemap
+    sudo gem install jekyll jekyll-sitemap jekyll-feed
 
 After Jekyll is installed, you can `cd` into the main folder of this
 repository and run
