@@ -77,4 +77,4 @@ class PreprocessorSpacy:
         :param document: the input string
         :return: a list processed tokens
         """
-        return list({token.lemma_.lower() for token in self.nlp(document) if not (token.is_stop or token.is_punct)})
+        return [token.lemma_.lower() for token in self.nlp(document) if not (token.is_stop or token.is_punct)]
