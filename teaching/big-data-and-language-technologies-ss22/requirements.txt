@@ -1,6 +1,3 @@
----
-layout: minimal
----
 tensorflow
 scikit-learn
 numpy
