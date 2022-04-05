@@ -20,13 +20,14 @@ If using `venv`, follow the [installation instructions](https://docs.python.org/
 
 1. Create a new virtual environment:
 
-
-	$ python3 -m venv <path-to-env>
-
+```shell
+$ python3 -m venv <path-to-env>
+```
 2. Activate the created environment:
 
-
- 	$ source <path-to-env>/bin/activate	
+```shell
+$ source <path-to-env>/bin/activate
+```
 
 ###### Installing Dependencies
 
@@ -35,21 +36,23 @@ We supply a `requirements.txt` listing all packages used throughout this course.
 
 1. Update `pip`
 
-
-    $  python3 -m pip install --upgrade pip
-
+```shell
+$ python3 -m pip install --upgrade pip
+```
 3. Install all dependencies from the `requirements.txt` file
 
-
-	$ pip install -r requirements.txt
-
+```shell
+$ pip install -r requirements.txt
+```
 
 ###### Starting Jupyter
 
 Each session is constructed as a [Jupyter Notebook](https://jupyter.org) which allows for interactive programming.
 Navigate to the root folder of the seminar and start the notebook folder
 
-	$ jupyter lab
+```shell
+$ jupyter lab
+```
 
 And thats it! Your browser should've opened automatically with the Jupyter Lab environment. You're all set.
 
