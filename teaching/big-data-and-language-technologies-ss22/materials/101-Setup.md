@@ -1,4 +1,4 @@
-# Deep Learning in Python - Session 01
+# Deep Learning in Python - Setup Guide
 
 - *Course*: Big Data and Language Technologies
 - *Date*: 04.04.2022
@@ -32,7 +32,7 @@ $ source <path-to-env>/bin/activate
 ###### Installing Dependencies
 
 Once your environment is activated, you can now install dependencies without interfering with other Python installations.
-We supply a `requirements.txt` listing all packages used throughout this course. You can use it to replicate our environment on your local machine to follow along. Packages can be installed using the `pip` package manager.
+We supply a [`requirements.txt`](https://temir.org/teaching/big-data-and-language-technologies-ss22/requirements.txt) listing all packages used throughout this course. You can use it to replicate our environment on your local machine to follow along. Packages can be installed using the `pip` package manager.
 
 1. Update `pip`
 
