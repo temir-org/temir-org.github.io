@@ -1,0 +1,7 @@
+Motivation of tf.data.Dataset
+
+What would you expect as methods from a dataset type?
+Map, filter, batch, pad, shuffle, repeat, persistence, iteration, from_generator, interleaving
+prefetching and caching
+But: no (native) train test split
+close integration with keras training methods
