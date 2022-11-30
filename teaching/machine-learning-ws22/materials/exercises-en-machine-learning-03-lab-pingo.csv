@@ -1,0 +1,4 @@
+Type,Question,Answer 1,Answer 2,Answer 3,Answer 4,Answer 5,Answer 6,Answer 7,Answer 8,Answer 9,Correct
+single,Gradient descent cannot be applied on $L_{0/1}(\mathbf{w})$.,True,False,,,,,,,,1
+single,"$h_2 \in H$ overfits $D$ if an $h_1 \in H$ exists with $Err(h_2, D) < Err(h_1, D)$ and $Err^{*}(h_2) < Err^{*}(h_1)$.",True,False,,,,,,,,2
+single,The sigmoid function's values are between 0 and 1.,True,False,,,,,,,,1
