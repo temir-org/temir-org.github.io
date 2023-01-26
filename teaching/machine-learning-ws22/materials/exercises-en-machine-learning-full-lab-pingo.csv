@@ -1,0 +1,30 @@
+Type,Question,Answer 1,Answer 2,Answer 3,Answer 4,Answer 5,Answer 6,Answer 7,Answer 8,Answer 9,Correct
+single,A multilayer perceptron with a linear activation function can only classify linearly separable datasets.,True,False,,,,,,,,1
+single,The PT algorithm performs gradient descent on the residuals of the perceptron.,True,False,,,,,,,,2
+single,The affine hyperplane can be defined as $\{\mathbf{x}| \vec{\mathbf{n}}^T\mathbf{x}=d\}$ with the normal vector $\vec{\mathbf{n}}$.,True,False,,,,,,,,1
+single,CART uses binary splittings.,True,False,,,,,,,,1
+single,ID3 uses the misclassification rate as a splitting criterion.,True,False,,,,,,,,2
+single,Monothetic splittings consider only a single feature per splitting.,True,False,,,,,,,,1
+single,"Computations in log space can help to prevent underflow, but require handling zero probabilities.",True,False,,,,,,,,1
+single,$P(A | B) = \frac{P(B) \cdot P(B | A)}{P(A)}$ holds.,True,False,,,,,,,,2
+single,The Theorem of Total Probability $P(B) = \sum_{i=1}^k P(A_i) \cdot P(B|A_i)$ requires mutual exclusive events $A_i$ with $\Omega = A_1 \cup ... \cup A_k$.,True,False,,,,,,,,1
+single,Gradient descent cannot be applied on $L_{0/1}(\mathbf{w})$.,True,False,,,,,,,,1
+single,"$h_2 \in H$ overfits $D$ if an $h_1 \in H$ exists with $Err(h_2, D) < Err(h_1, D)$ and $Err^{*}(h_2) < Err^{*}(h_1)$.",True,False,,,,,,,,2
+single,The sigmoid function's values are between 0 and 1.,True,False,,,,,,,,1
+single,The $F_1$ score is calculated as arithmetic mean between precision and recall.,True,False,,,,,,,,2
+single,The Bayes classifier returns for $\mathbf{x}$ the class with the highest probability.,True,False,,,,,,,,1
+multi,"Within the class of linear unbiased estimators, the least squares estimator has minimum variance, i.e., is most efficient.",True,False,,,,,,,,1
+single,"$y()$ is consistent with an example $(\mathbf{x}, c)$ iff $y(\mathbf{x}) = 1$.",True,False,,,,,,,,2
+single,I have some open questions.,True,False,,,,,,,,""
+single,I reviewed the homework exercise solutions.,True,False,,,,,,,,""
+single,I solved the homework exercises.,True,False,,,,,,,,""
+single,I attended or reviewed the lecture.,True,False,,,,,,,,""
+single,"In Python, [3]+[6] is the same as np.array([3])+np.array([6]).",True,False,,,,,,,,2
+single,The gradient resembles the direction of steepest descent.,True,False,,,,,,,,2
+single,"Multiplying a (n,m)-matrix and a (k,m)-matrix is always possible.",True,False,,,,,,,,2
+single,"A (4,2)-matrix has 4 rows and 2 columns.",True,False,,,,,,,,1
+single,Matrix multiplication is commutative.,True,False,,,,,,,,2
+single,Matrix multiplication is associative.,True,False,,,,,,,,1
+single,"Machine learning systems: Given the mapping from objects into the feature space and the model function, it is easy to derive the mapping from objects to classes.",True,False,,,,,,,,1
+single,Discriminative classifiers (models) learn a boundary between classes.,True,False,,,,,,,,1
+single,Optical character recognition is a popular example for reinforcement learning.,True,False,,,,,,,,2
