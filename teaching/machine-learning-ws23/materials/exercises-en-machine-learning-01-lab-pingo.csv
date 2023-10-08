@@ -1,0 +1,14 @@
+Type,Question,Answer 1,Answer 2,Answer 3,Answer 4,Answer 5,Answer 6,Answer 7,Answer 8,Answer 9,Correct
+single,I have some open questions.,True,False,,,,,,,,""
+single,I reviewed the homework exercise solutions.,True,False,,,,,,,,""
+single,I solved the homework exercises.,True,False,,,,,,,,""
+single,I attended or reviewed the lecture.,True,False,,,,,,,,""
+single,"In Python, [3]+[6] is the same as np.array([3])+np.array([6]).",True,False,,,,,,,,2
+single,The gradient resembles the direction of steepest descent.,True,False,,,,,,,,2
+single,"Multiplying a (n,m)-matrix and a (k,m)-matrix is always possible.",True,False,,,,,,,,2
+single,"A (4,2)-matrix has 4 rows and 2 columns.",True,False,,,,,,,,1
+single,Matrix multiplication is commutative.,True,False,,,,,,,,2
+single,Matrix multiplication is associative.,True,False,,,,,,,,1
+single,"Machine learning systems: Given the mapping from objects into the feature space and the model function, it is easy to derive the mapping from objects to classes.",True,False,,,,,,,,1
+single,Discriminative classifiers (models) learn a boundary between classes.,True,False,,,,,,,,1
+single,Optical character recognition is a popular example for reinforcement learning.,True,False,,,,,,,,2
