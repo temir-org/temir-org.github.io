@@ -1,189 +1,440 @@
 ---
 layout: default
 title: Information Retrieval
-description: Course page of Information Retrieval
+description: Course page of Introduction to Information Retrieval
 ---
 <main class="uk-section uk-section-default">
-    <div class="uk-container">
-        <h1>Course in Information Retrieval</h1>
-        <ul class="uk-list">
-            <li><span data-uk-icon="chevron-down"></span>  <a href="#general-information">General Information</a></li>
-            <!--li><span data-uk-icon="chevron-down"></span>  <a href="#announcements">Announcements</a></li-->
-            <li><span data-uk-icon="chevron-down"></span>  <a href="#organization">Organization</a></li>
-            <li><span data-uk-icon="chevron-down"></span>  <a href="#lecturenotes">Lecturenotes</a></li>
-            <!--li><span data-uk-icon="chevron-down"></span>  <a href="#lab-project">Lab Project</a></li-->
+  <div class="uk-container">
+    <h1>Introductory course to Information Retrieval</h1>
+    <ul class="uk-list">
+      <li><span data-uk-icon="chevron-down"></span> <a href="#general-information">Description</a></li>
+      <li><span data-uk-icon="chevron-down"></span> <a href="#description">General Information</a></li>
+      <li><span data-uk-icon="chevron-down"></span> <a href="#organization">Organization</a></li>
+      <li><span data-uk-icon="chevron-down"></span> <a href="#lecturenotes">Lecturenotes</a></li>
+      <li><span data-uk-icon="chevron-down"></span>  <a href="#lab-project">Lab Project</a></li>
+      <li><span data-uk-icon="chevron-down"></span> <a href="#literature">Literature</a></li>
+      <li><span data-uk-icon="chevron-down"></span> <a href="#resources">Further Resources</a></li>
+    </ul>
+    <h2 id="description">Description</h2>
+    The search for information to close a knowledge gap or advance the solution of a complex task is an everyday
+    process. Information systems that enable searching through digital data &mdash; known as search engines &mdash; help
+    to retrieve information. In contrast to data retrieval, searching is usually characterized by vague queries and
+    uncertain or incomplete knowledge. The role of search engines in the transfer of knowledge from the producers to the
+    consumers of information is the subject of research in the field of information retrieval. This module teaches basic
+    concepts and methods of information retrieval and the necessary mathematical background. Key course contents are the
+    architecture of search engines, acquisition and crawling, preprocessing and information extraction from unstructured
+    text data, algorithms and data structures for indices and the processing of queries, retrieval models,
+    learning-to-rank, retrieval axioms and (online) evaluation methods.
+
+    <h2 id="general-information">General Information</h2>
+    <div class="uk-overflow-auto">
+      <table class="uk-table uk-table-divider uk-table-condensed">
+        <tbody>
+          <tr>
+            <td class="uk-table-shrink">Lecturer</td>
+            <td class="uk-table-shrink"><a href="https://temir.org/people.html#potthast">Prof. Dr. Martin Potthast</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="uk-table-shrink">Teaching Assistants</td>
+            <td class="uk-table-shrink"><a href="https://temir.org/people.html#hagen">Tim Hagen</a></td>
+          </tr>
+          <tr>
+            <td class="uk-table-shrink">Workload</td>
+            <td class="uk-table-shrink">6 Credits: 2 SWS Lecture, 2 SWS Exercises</td>
+          </tr>
+          <tr>
+            <td class="uk-table-shrink">Prerequisites</td>
+            <td class="uk-table-shrink">Passing grades in Grundbereich A and B (Examination regulations § 7 (2) and (3))
+            </td>
+          </tr>
+          <tr>
+            <td class="uk-table-shrink">Lecture</td>
+            <td class="uk-table-shrink">Tuesday, 10:00 - 14:00, H&ouml;rsaal 0446</td>
+          </tr>
+          <tr>
+            <td class="uk-table-shrink">Exercise</td>
+            <td class="uk-table-shrink">Tuesday, 10:00 - 14:00, H&ouml;rsaal 0446</td>
+          </tr>
+          <tr>
+            <td class="uk-table-shrink">Contact</td>
+            <td class="uk-table-shrink">via email or office hours</td>
+          </tr>
+          <tr>
+            <td class="uk-table-shrink">Exam</td>
+            <td class="uk-table-shrink">TBD</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--h2 id="announcements">Announcements</h2-->
+    <h2 id="organization">Organization</h2>
+    <ul class="uk-list uk-list-striped">
+      <li><b>Lectures</b> will take place in person, but have additionally been prerecorded. The videos can be accessed
+        by following the lecturenotes below, or on the Webis YouTube channel. [<a
+          href="https://www.youtube.com/playlist?list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0">playlist</a>]
+      </li>
+      <li><b>Lab</b> and corresponding material consists of a project in which you develop your own domain-specific
+        information retrieval system. We will have regular tutorial sessions from <b>TBD</b> on.
+      </li>
+      <li><b>Examination</b> will take place either as a written exam (90 min) or oral exam (30 min).
+      </li>
+      <li><b>Communication</b>
+        <ul class="uk-list uk-list-bullet">
+          <li>Discord &mdash; direct communication with teaching staff and announcements will be posted here. Please
+            email the
+            teaching staff for a link to join.
+          <li>Lecture website &mdash; materials and organisation annoucements will be uploaded on this website.</li>
+          <li>Email &mdash; important announcements will be sent out via mail.</li>
         </ul>
-        <h2 id="general-information">General Information</h2>
-        <div class="uk-overflow-auto">
-            <table class="uk-table uk-table-divider uk-table-condensed">
-                <tbody>
-                    <tr>
-                        <td class="uk-table-shrink">Lecturer</td>
-                        <td class="uk-table-shrink"><a href="https://temir.org/people.html#potthast">Prof. Dr. Martin Potthast</a></td>
-                    </tr>
-                    <tr>
-                        <td class="uk-table-shrink">Teaching Assistants</td>
-                        <td class="uk-table-shrink"><a href="https://temir.org/people.html#hagen">Tim Hagen</a></td>
-                    </tr>
-                    <tr>
-                        <td class="uk-table-shrink">Workload</td>
-                        <td class="uk-table-shrink">2 SWS Lecture, 2 SWS Exercises</td>
-                    </tr>
-                    <tr>
-                        <td class="uk-table-shrink">Lecture</td>
-                        <td class="uk-table-shrink">Tuesday, 10:00 - 14:00, H&ouml;rsaal 0446</td>
-                    </tr>
-                    <tr>
-                        <td class="uk-table-shrink">Exercise</td>
-                        <td class="uk-table-shrink">Tuesday, 10:00 - 14:00, H&ouml;rsaal 0446</td>
-                    </tr>
-                    <tr>
-                        <td class="uk-table-shrink">Contact</td>
-                        <td class="uk-table-shrink">via email or office hours</td>
-                    </tr>
-                    <tr>
-                        <td class="uk-table-shrink">Exam</td>
-                        <td class="uk-table-shrink">TBD</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <!--h2 id="announcements">Announcements</h2-->
-        <h2 id="organization">Organization</h2>
-        <ul class="uk-list uk-list-striped">
-          <li><b>Lectures</b> will take place in person.
-          </li>
-          <li><b>Lab</b> TBD
-          </li>
-          <li><b>Examination</b> TBD
-          </li>
-          <li><b>Communication</b>
+      </li>
+    </ul>
+
+    <h2 id="lecturenotes">Lecturenotes</h2>
+    <ul class="uk-list uk-list-bullet">
+      <li>
+        <a href="https://webis.de/lecturenotes.html#information-retrieval">Information Retrieval</a> »
+        <a href="https://webis.de/lecturenotes.html#part-information-retrieval-intro">Introduction</a> »
+        <a href="https://webis.de/lecturenotes.html#unit-en-ir-organization">Organization, Literature</a><br />
+        Pre-recorded:
+        [<a href="https://www.youtube.com/watch?v=lYouZC4VB5Y&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=2">video
+          1</a>]
+      </li>
+      <li>
+        <a href="https://webis.de/lecturenotes.html#information-retrieval">Information Retrieval</a> »
+        <a href="https://webis.de/lecturenotes.html#part-information-retrieval-intro">Introduction</a> »
+        <a href="https://webis.de/lecturenotes.html#unit-en-ir-introduction">Retrieval Problems</a><br />
+        Pre-recorded:
+        [<a href="https://www.youtube.com/watch?v=xSdl1592OfA&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=3">video
+          2</a>]
+        [<a href="https://www.youtube.com/watch?v=80gWwXI-Mkw&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=4">video
+          3</a>]
+        [<a href="https://www.youtube.com/watch?v=dp4iVZYIUJk&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=5">video
+          4</a>]
+        [<a href="https://www.youtube.com/watch?v=xKiynRNDPgU&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=6">video
+          5</a>]
+        [<a href="https://www.youtube.com/watch?v=ozy1rdvSwJs&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=7">video
+          6</a>]
+      </li>
+      <li>
+        <a href="https://webis.de/lecturenotes.html#information-retrieval">Information Retrieval</a> »
+        <a href="https://webis.de/lecturenotes.html#part-information-retrieval-intro">Introduction</a> »
+        <a href="https://webis.de/lecturenotes.html#unit-en-ir-architecture">Architecture of a Search Engine</a><br />
+        Pre-recorded:
+        [<a href="https://www.youtube.com/watch?v=-pl6uo3ASqE&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=9">video
+          7</a>]
+        [<a href="https://www.youtube.com/watch?v=xzMrBRF0s6w&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=10">video
+          8</a>]
+        [<a href="https://www.youtube.com/watch?v=0SkA4PkBwtg&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=11">video
+          9</a>]
+        [<a href="https://www.youtube.com/watch?v=2iLc5kw6kio&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=12">video
+          10</a>]
+        [<a href="https://www.youtube.com/watch?v=RzMc6jxp6T4&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=13">video
+          11</a>]
+        [<a href="https://www.youtube.com/watch?v=PCv9MAyAiLE&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=14">video
+          12</a>]
+        [<a href="https://www.youtube.com/watch?v=rKBD-bgIBSI&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=15">video
+          13</a>]
+        [<a href="https://www.youtube.com/watch?v=8d1AkLhi6Yk&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=16">video
+          14</a>]
+        <br><br>
+      </li>
+      <li>
+        <a href="https://webis.de/lecturenotes.html#information-retrieval">Information Retrieval</a> »
+        <a href="https://webis.de/lecturenotes.html#part-evaluation">Evaluation</a> »
+        <a href="https://webis.de/lecturenotes.html#unit-en-laboratory-experiments">Laboratory Experiments</a><br />
+        Pre-recorded:
+        [<a href="https://www.youtube.com/watch?v=JyiGZcsJ4wQ&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=22">video
+          30</a>]
+      </li>
+      <li>
+        <a href="https://webis.de/lecturenotes.html#information-retrieval">Information Retrieval</a> »
+        <a href="https://webis.de/lecturenotes.html#part-evaluation">Evaluation</a> »
+        <a href="https://webis.de/lecturenotes.html#unit-en-ir-effectiveness-measures">Effectiveness Measures</a><br />
+        Pre-recorded:
+        [<a href="https://www.youtube.com/watch?v=Igb8dJgly4I&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=23">video
+          31</a>]
+        [<a href="https://www.youtube.com/watch?v=LPGRZNi2fVA&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=24">video
+          32</a>]
+        [<a href="https://www.youtube.com/watch?v=CsYxGBYBnv4&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=25">video
+          33</a>]
+      </li>
+      <li>
+        <a href="https://webis.de/lecturenotes.html#information-retrieval">Information Retrieval</a> »
+        <a href="https://webis.de/lecturenotes.html#part-evaluation">Evaluation</a> »
+        <a href="https://webis.de/lecturenotes.html#unit-en-training-and-testing">Training and Testing</a><br />
+        Pre-recorded:
+        [<a href="https://www.youtube.com/watch?v=ifMPJIdIB1Q&list=PLgD1TOdHQCI8tm5KY8mIyyGdfKIyn27Jc&index=29">video
+          34</a>]
+        <br><br>
+      </li>
+      <li>
+        <a href="https://webis.de/lecturenotes.html#information-retrieval">Information Retrieval</a> »
+        <a href="https://webis.de/lecturenotes.html#part-indexing">Indexing</a> »
+        <a href="https://webis.de/lecturenotes.html#unit-en-indexing-basics">Indexing Basics</a><br />
+        Pre-recorded:
+        [<a href="https://www.youtube.com/watch?v=bNZwWXXslME&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=17">video
+          17</a>]
+      </li>
+      <li>
+        <a href="https://webis.de/lecturenotes.html#information-retrieval">Information Retrieval</a> »
+        <a href="https://webis.de/lecturenotes.html#part-indexing">Indexing</a> »
+        <a href="https://webis.de/lecturenotes.html#unit-en-inverted-index">Inverted Index</a><br />
+        Pre-recorded:
+        [<a href="https://www.youtube.com/watch?v=sPBulVDrx1U&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=18">video
+          18</a>]
+        [<a href="https://www.youtube.com/watch?v=BXvQNYYfEJw&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=19">video
+          19</a>]
+        [<a href="https://www.youtube.com/watch?v=FsaSjy0IAl0&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=20">video
+          20</a>]
+        [<a href="https://www.youtube.com/watch?v=IQNQkM3YmtA&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=21">video
+          21</a>]
+        <br><br>
+      </li>
+      <li>
+        <a href="https://webis.de/lecturenotes.html#natural-language-processing">Natural Language Processing</a> »
+        <a href="https://webis.de/lecturenotes.html#part-words">Words</a> »
+        <a href="https://webis.de/lecturenotes.html#unit-en-text-preprocessing">Text Preprocessing</a>
+        [<a href="unit-en-text-preprocessing.pdf">excerpt</a>]<br />
+        Pre-recorded:
+        [<a href="https://www.youtube.com/watch?v=E15I9aR6QcU&list=PLgD1TOdHQCI8Trc_h5CHsQZyoyOvaPmrL&index=2">video
+          15</a>]
+      </li>
+      <li>
+        <a href="https://webis.de/lecturenotes.html#natural-language-processing">Natural Language Processing</a> »
+        <a href="https://webis.de/lecturenotes.html#part-words">Words</a> »
+        <a href="https://webis.de/lecturenotes.html#unit-en-morphological-analysis">Morphological Analysis</a>
+        [<a href="unit-en-morphological-analysis.pdf">excerpt</a>]<br />
+        Pre-recorded:
+        [<a href="https://www.youtube.com/watch?v=ZHYvD_FusBU&list=PLgD1TOdHQCI8Trc_h5CHsQZyoyOvaPmrL&index=3">video
+          16</a>]
+        <br><br>
+      </li>
+      <li>
+        <a href="https://webis.de/lecturenotes.html#information-retrieval">Information Retrieval</a> »
+        <a href="https://webis.de/lecturenotes.html#part-retrieval-models">Retrieval Models</a> »
+        <a href="https://webis.de/lecturenotes.html#unit-en-retrieval-models">Overview of Retrieval Models</a><br />
+        Pre-recorded:
+        [<a href="https://www.youtube.com/watch?v=oOkhrogKKsE&list=PLgD1TOdHQCI8tm5KY8mIyyGdfKIyn27Jc&index=22">video
+          22</a>]
+      </li>
+      <li>
+        <a href="https://webis.de/lecturenotes.html#information-retrieval">Information Retrieval</a> »
+        <a href="https://webis.de/lecturenotes.html#part-retrieval-models">Retrieval Models</a> »
+        <a href="https://webis.de/lecturenotes.html#unit-en-rm-unigram-models1">Unigram Models 1</a><br />
+        Pre-recorded:
+        [<a href="https://www.youtube.com/watch?v=EvTx66hnJ_c&list=PLgD1TOdHQCI8tm5KY8mIyyGdfKIyn27Jc&index=23">video
+          23</a>]
+      </li>
+      <li>
+        <a href="https://webis.de/lecturenotes.html#machine-learning">Machine Learning</a> »
+        <a href="https://webis.de/lecturenotes.html#part-bayesian-learning">Bayesian Learning</a> »
+        <a href="https://webis.de/lecturenotes.html#unit-en-probability-basics">Probability Basics</a><br />
+        Pre-recorded:
+        [<a href="https://www.youtube.com/watch?v=HxRW2HHJudA&list=PLgD1TOdHQCI_27U3pXR1OSzBaZuzkb2YP&index=24">video
+          24</a>]
+        [<a href="https://www.youtube.com/watch?v=Fe5UCee385o&list=PLgD1TOdHQCI_27U3pXR1OSzBaZuzkb2YP&index=25">video
+          25</a>]
+      </li>
+      <li>
+        <a href="https://webis.de/lecturenotes.html#machine-learning">Machine Learning</a> »
+        <a href="https://webis.de/lecturenotes.html#part-bayesian-learning">Bayesian Learning</a> »
+        <a href="https://webis.de/lecturenotes.html#unit-en-bayes-classifier">Bayes Classifier</a><br />
+        Pre-recorded:
+        [<a href="https://www.youtube.com/watch?v=hpWx9K-m6LU&list=PLgD1TOdHQCI_27U3pXR1OSzBaZuzkb2YP&index=26">video
+          26</a>]
+      </li>
+      <li>
+        <a href="https://webis.de/lecturenotes.html#information-retrieval">Information Retrieval</a> »
+        <a href="https://webis.de/lecturenotes.html#part-retrieval-models">Retrieval Models</a> »
+        <a href="https://webis.de/lecturenotes.html#unit-en-rm-unigram-models2">Unigram Models 2</a><br />
+        Pre-recorded:
+        [<a href="https://www.youtube.com/watch?v=auJh-SbYOlM&list=PLgD1TOdHQCI8tm5KY8mIyyGdfKIyn27Jc&index=27">video
+          27</a>]
+        [<a href="https://www.youtube.com/watch?v=0fF95W9AME4&list=PLgD1TOdHQCI8tm5KY8mIyyGdfKIyn27Jc&index=28">video
+          28</a>]
+      </li>
+      <li>
+        <a href="https://webis.de/lecturenotes.html#information-retrieval">Information Retrieval</a> »
+        <a href="https://webis.de/lecturenotes.html#part-retrieval-models">Retrieval Models</a> »
+        <a href="https://webis.de/lecturenotes.html#unit-en-rm-sequence-models">Sequence Models</a><br />
+        Pre-recorded:
+        [<a href="https://www.youtube.com/watch?v=DEZdFf3vV6E&list=PLgD1TOdHQCI8tm5KY8mIyyGdfKIyn27Jc&index=30">video
+          29</a>]
+        <br><br>
+      </li>
+      <!--
+            <li>
+              <a href="https://webis.de/lecturenotes.html#information-retrieval">Information Retrieval</a> »
+              <a href="https://webis.de/lecturenotes.html#part-retrieval-models">Retrieval Models</a> »
+              <a href="https://webis.de/lecturenotes.html#unit-en-rm-unigram-models3">Unigram Models 3</a>
+            </li>
+            -->
+      <!--
+            <li>
+              <a href="https://webis.de/lecturenotes.html#information-retrieval">Information Retrieval</a> »
+              <a href="https://webis.de/lecturenotes.html#part-ir-applications">IR Applications</a> »
+              <a href="https://webis.de/lecturenotes.html#unit-en-argument-search">Argument Search</a><br/>
+              Pre-recorded: 
+              [<a href="https://www.youtube.com/watch?v=7QLMlCHkCFk&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=26">video 35</a>]
+              [<a href="https://www.youtube.com/watch?v=XhcCux29Xtc&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=27">video 36</a>]
+              [<a href="https://www.youtube.com/watch?v=Sa6sFDqwBGs&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=28">video 37</a>]
+              [<a href="https://www.youtube.com/watch?v=YV4k39rQC08&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=29">video 38</a>]
+              [<a href="https://www.youtube.com/watch?v=B6DOIOBr4SE&list=PLgD1TOdHQCI9QetNee94dtk7YM4-WN6n0&index=30">video 39</a>]
+            </li>
+            -->
+    </ul>
+
+    <h2 id="lab-project">Lab Project</h2>
+    <p class="uk-text-left">
+      The lab project consists of building and evaluating an information system for a specific domain. This entails data
+      processing, implementing retrieval methods, and an analysis of the retrieval system.
+      <br>
+      Lab project material will be published here over the course of the semester.
+      <!--br>
+      Deliverables are to be handed in by mail to the lab supervisors and/or Tira.-->
+    </p>
+    <!--table class="uk-table uk-table-hover uk-table-divider">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Title</th>
+          <th>Materials</th>
+          <th>Deliverables</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>16.10.2023</td>
+          <td>
             <ul class="uk-list uk-list-bullet">
-              <li>Discord - direct communication with teaching staff and annoucements will be posted here. Please email the teaching staff for a link to join.
-              <li>Lecture website - materials and organisation annoucements will be uploaded on this website.</li>
-              <li>Email - important announcements will be sent out via mail.</li>
+              <li>Lab Overview, Group Formation</li>
+              <li>Milestone I Information Session</li>
             </ul>
-          </li>
-        </ul>
+          </td>
+          <td>
+            <ul class="uk-list uk-list-bullet">
+              <li>[<a href="https://temir.org/teaching/information-retrieval-ws23/ir-ws23-lab-1.pdf">slides</a>]</li>
+              <li>[<a href="https://temir.org/teaching/information-retrieval-ws23/topics.xml">sample topic file</a>]
+              </li>
+              <li>[<a
+                  href="https://temir.org/teaching/information-retrieval-ws23/tutorial-01-ir-datasets.ipynb">notebook</a>]
+              </li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>23.10.2023</td>
+          <td>
+            <ul class="uk-list uk-list-bullet">
+              <li>Milestone II information session</li>
+            </ul>
+          </td>
+          <td>
+            <ul class="uk-list uk-list-bullet">
+              <li>[<a href="https://temir.org/teaching/information-retrieval-ws23/ir-ws23-lab-2.pdf">slides</a>]</li>
+            </ul>
+          </td>
+          <td>
+            <ul class="uk-list uk-list-bullet">
+              <li><span class="uk-text-success">Milestone I due</span></li>
+              <li>Hand in as XML file (see example) via mail.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>06.11.2023</td>
+          <td>
+            <ul class="uk-list uk-list-bullet">
+              <li>Milestone III information session</li>
+            </ul>
+          </td>
+          <td>
+            <ul class="uk-list uk-list-bullet">
+              <li>[<a href="https://temir.org/teaching/information-retrieval-ws23/ir-ws23-lab-3.pdf">slides</a>]</li>
+            </ul>
+          </td>
+          <td><span class="uk-text-success">Milestone II due</span></td>
+        </tr>
+        <tr>
+          <td>20.11.2023</td>
+          <td>
+            <ul class="uk-list uk-list-bullet">
+              <li>Project Q&A</li>
+            </ul>
+          </td>
+          <td>
+            <ul class="uk-list uk-list-bullet">
+              <li>[<a href="https://temir.org/teaching/information-retrieval-ws23/ir-ws23-lab-4.pdf">slides</a>]</li>
+              <li>[<a
+                  href="https://conf.fmi.uni-leipzig.de/playback/presentation/2.3/9d654239893aee5d164d92e3b2263ab510249eea-1700482128152">recording</a>
+              </li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>27.11.2023</td>
+          <td>
+            <ul class="uk-list uk-list-bullet">
+              <li>Milestone IV Information Session (1)</li>
+            </ul>
+          </td>
+          <td>
+            <ul class="uk-list uk-list-bullet">
+              <li>[<a href="https://temir.org/teaching/information-retrieval-ws23/ir-ws23-lab-5.pdf">slides</a>]</li>
+            </ul>
+          </td>
+          <td><span class="uk-text-success">Milestone III due</span></td>
+        </tr>
+        <tr>
+          <td>11.12.2023</td>
+          <td>
+            <ul class="uk-list uk-list-bullet">
+              <li>Milestone IV Information Session (2)</li>
+            </ul>
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>22.01.2024</td>
+          <td>
+            <ul class="uk-list uk-list-bullet">
+              <li>Wrap up</li>
+              <li>Questions/Comments/Concerns</li>
+            </ul>
+          </td>
+          <td></td>
+          <td><span class="uk-text-success">Milestone IV due</span></td>
+        </tr>
+      </tbody>
+    </table-->
 
-        <h2 id="lecturenotes">Lecturenotes</h2>
-        <p class="uk-text-left">
-            Lecture material will be published here over the course of the semester.
-        </p>
-        <!--ul class="uk-list uk-list-bullet">
-            <li>09.10.2023 <a href="https://downloads.webis.de/lecturenotes/information-retrieval/unit-en-ir-introduction.pdf">Introduction</a> and Organisation</li>
-            <li>16.10.2023 <a href="https://downloads.webis.de/lecturenotes/information-retrieval/unit-en-ir-architecture.pdf">Search Engine Architecture</a> and <a href="https://downloads.webis.de/lecturenotes/information-retrieval/unit-en-laboratory-experiments.pdf">Evaluation I</a></li>
-            <li>23.10.2023 <a href="part-en-evaluation.pdf">Evaluation II</a></li>
-            <li>30.10.2023 <a href="part-en-indexing.pdf">Indexing</a></li>
-            <li>06.11.2023 <a href="part-en-retrieval-models.pdf">Retrieval Models I</a></li>
-            <li>13.11.2023 <a href="https://downloads.webis.de/lecturenotes/information-retrieval/unit-en-rm-learning-to-rank.pdf">Retrieval Models II</a></li>
-            <li>20.11.2023 --Skip--</li>
-            <li>27.11.2023 <a href="part-en-retrieval-models-iii.pdf">Retrieval Models III</a></li>
-            <li>04.12.2023 --Dies Academicus--</li>
-            <li>11.12.2023 <a href="part-en-retrieval-models-iv.pdf">Retrieval Models IV</a></li>
-            <li>18.12.2023 <a href="part-en-queries.pdf">Queries</a></li>
-            <li>25.12.2023 --Winter Break--</li>
-            <li>01.12.2023 --Winter Break--</li>
-            <li>08.01.2024 <a href="part-en-domain-specific-search.pdf">Domain Specific Search</a></li>
-            <li>15.01.2024 <a href="part-en-generative-ir.pdf">Generative IR</a></li>
-            <li>22.01.2024 Exam Q&amp;A</li>
-            <li>06.02.2024 Exam, start at 9:45, in HS 3 (Hörsaalgebäude)</li>
-            <li>26.03.2024 Rewrite exam (Nachklausur), start at 14:15, in S 102 (Seminargebäude)</li>
-        </ul-->
+    <h2 id="literature">Literature</h2>
+    <ul>
+      <li>W.B. Croft, D. Metzler, T. Strohman. Search Engines: Information Retrieval in Practice.</li>
+      <li>C.D. Manning, P. Raghavan, H. Schütze. Introduction to Information Retrieval. [<a
+          href="https://nlp.stanford.edu/IR-book/information-retrieval-book.html">view</a>]</li>
+    </ul>
 
-        <!--h2 id="lab-project">Lab Project</h2>
-        <p class="uk-text-left">
-            The lab project consists of building and evaluating an information system for a specific domain. This entails data processing, implementing retrieval methods, and an analysis of the retrieval system.
-            <br>
-            Lab project material will be published here over the course of the semester.
-	    <br>
-	    Deliverables are to be handed in by mail to the lab supervisors and/or Tira.
-        </p>
-        <table class="uk-table uk-table-hover uk-table-divider">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Title</th>
-              <th>Materials</th>
-              <th>Deliverables</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>16.10.2023</td>
-              <td><ul class="uk-list uk-list-bullet">
-                  <li>Lab Overview, Group Formation</li>
-                  <li>Milestone I Information Session</li>
-              </ul></td>
-              <td><ul class="uk-list uk-list-bullet">
-                  <li>[<a href="https://temir.org/teaching/information-retrieval-ws23/ir-ws23-lab-1.pdf">slides</a>]</li>
-                  <li>[<a href="https://temir.org/teaching/information-retrieval-ws23/topics.xml">sample topic file</a>]</li>
-                  <li>[<a href="https://temir.org/teaching/information-retrieval-ws23/tutorial-01-ir-datasets.ipynb">notebook</a>]</li>
-              </ul></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>23.10.2023</td>
-              <td><ul class="uk-list uk-list-bullet">
-                  <li>Milestone II information session</li>
-              </ul></td>
-              <td><ul class="uk-list uk-list-bullet">
-                  <li>[<a href="https://temir.org/teaching/information-retrieval-ws23/ir-ws23-lab-2.pdf">slides</a>]</li>
-              </ul></td>
-              <td><ul class="uk-list uk-list-bullet">
-                  <li><span class="uk-text-success">Milestone I due</span></li>
-                  <li>Hand in as XML file (see example) via mail.</li>
-              </ul></td>
-            </tr>
-            <tr>
-              <td>06.11.2023</td>
-              <td><ul class="uk-list uk-list-bullet">
-                  <li>Milestone III information session</li>
-              </ul></td>
-              <td><ul class="uk-list uk-list-bullet">
-                  <li>[<a href="https://temir.org/teaching/information-retrieval-ws23/ir-ws23-lab-3.pdf">slides</a>]</li>
-              </ul></td>
-              <td><span class="uk-text-success">Milestone II due</span></td>
-            </tr>
-            <tr>
-              <td>20.11.2023</td>
-              <td><ul class="uk-list uk-list-bullet">
-                  <li>Project Q&A</li>
-              </ul></td>
-              <td><ul class="uk-list uk-list-bullet">
-                  <li>[<a href="https://temir.org/teaching/information-retrieval-ws23/ir-ws23-lab-4.pdf">slides</a>]</li>
-                  <li>[<a href="https://conf.fmi.uni-leipzig.de/playback/presentation/2.3/9d654239893aee5d164d92e3b2263ab510249eea-1700482128152">recording</a></li>
-              </ul></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>27.11.2023</td>
-              <td><ul class="uk-list uk-list-bullet">
-                  <li>Milestone IV Information Session (1)</li>
-              </ul></td>
-	       <td><ul class="uk-list uk-list-bullet">
-		<li>[<a href="https://temir.org/teaching/information-retrieval-ws23/ir-ws23-lab-5.pdf">slides</a>]</li>
-              </ul></td>
-              <td><span class="uk-text-success">Milestone III due</span></td>
-            </tr>
-            <tr>
-              <td>11.12.2023</td>
-              <td><ul class="uk-list uk-list-bullet">
-                  <li>Milestone IV Information Session (2)</li>
-              </ul></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>22.01.2024</td>
-              <td><ul class="uk-list uk-list-bullet">
-                  <li>Wrap up</li>
-                  <li>Questions/Comments/Concerns</li>
-              </ul></td>
-              <td></td>
-              <td><span class="uk-text-success">Milestone IV due</span></td>
-            </tr>
-          </tbody>
-        </table-->
+    <h2 id="resources">Further Resources</h2>
+    <ul class="uk-list uk-list-divider">
+      <li>01 &mdash; Introduction to Python
+        [<a
+          href="https://nbviewer.jupyter.org/urls/temir.org/teaching/information-retrieval-ws24/01-Python.ipynb">view</a>]
+        [<a href="./01-Python.ipynb">download</a>]
+      </li>
+      <li>02 &mdash; Introduction to Jupyter
+        [<a
+          href="https://nbviewer.jupyter.org/urls/temir.org/teaching/information-retrieval-ws24/02-Jupyter.ipynb">view</a>]
+        [<a href="./02-Jupyter.ipynb">download</a>
+      </li>
+      <li>03 &mdash; How to commandline
+        [<a href="https://missing.csail.mit.edu/">MIT's missing-semester</a>]
+      </li>
+    </ul>
+
   </div>
 </main>
