@@ -1,0 +1,78 @@
+---
+layout: default
+title: Scalable Language Technologies Lab
+description: Page on the Scalable Language Technologies Lab
+---
+<main class="uk-section uk-section-default">
+  <div class="uk-container">
+    <h2>Usage</h2>
+    <p>The *.ovpn file you download contains both your VPN configuration as well as your private key and certificate
+        and can be used to connect to the VPN.<br><em>Please keep the file in a secure location and contact an
+            administrator in case your certificate was compromised!</em></p>
+    
+    <div class="uk-grid uk-child-width-1-2@m uk-margin-large-top" data-uk-grid="">
+        <div class="uk-first-column">
+            <h3>Linux (Command Line)</h3>
+    
+            <p>Install <code>openvpn</code>:</p>
+            <pre><code>sudo apt install openvpn</code></pre>
+            <p>Load the *.ovpn file (<code>sudo</code> may be required):</p>
+            <pre><code>openvpn *.ovpn</code></pre>
+            <p>You will have access to the VPN as long as you don't stop the <code>openvpn</code> process
+                (<kbd>Ctrl</kbd>+<kbd>C</kbd> or close the terminal). Note that DNS settings will not necessarily be
+                applied with this method. If you want to resolve other hosts in the VPN, add <code>10.141.0.1</code>
+                as a DNS server to your network configuration.</p>
+    
+            <h3>Linux (Network Manager)</h3>
+    
+            <p>Install the OpenVPN module for the NetworkManager:</p>
+            <pre><code>sudo apt install network-manager-openvpn</code></pre>
+    
+            <p>If you are using Gnome as your desktop, you may also want to install</p>
+            <pre><code>sudo apt install network-manager-openvpn-gnome</code></pre>
+            <p>Import the *.ovpn file with</p>
+            <pre><code>nmcli connection import type openvpn file *.ovpn</code></pre>
+            <p>You can also import it via a NetworkManager GUI frontend by adding a new connection
+                and choosing <em>Import VPN connection...</em> (screen shot taken on KDE, Gnome differs slightly).</p>
+            <img src="/static/img/pki/linux-nm-kde.png" style="max-width: 100%" alt="KDE import OVPN file">
+            <p>Now use your desktop's NetworkManager applet in the tray to activate the VPN connection.</p>
+            <p><strong>Important:</strong> Due to a <del>bug</del> feature in NetworkManager, you may experience that
+                you cannot access anything except the University network after activating the VPN.
+                If that is the case, edit the VPN connection, click <em>IPv4</em> and then <em>Routes</em>.
+                Check the box for <em>Use only for resources on this connection</em> (or similar).
+            </p><p>You can also change this option on the command line:</p>
+            <pre><code>nmcli connection modify "Connection Name" ipv4.never-default true</code></pre>
+            <p>where <code>"Connection Name"</code> is the name of your VPN connection (defaults to the name
+                of the *.ovpn file, but you can change it to whatever you like).</p>
+        </div>
+        <div>
+            <h3>Windows</h3>
+            <p>Download <a href="https://openvpn.net/client-connect-vpn-for-windows/" target="_blank">OpenVPN Connect for Windows</a>, install and
+                start it. Then click <em>File</em> and select your *.ovpn file. In the following dialog make sure all information
+                is correct and then click <em>Save</em>. When the file has been imported successfully, click the toggle button to activate the VPN and enter your chosen password
+                to decrypt your private key.</p>
+            <img src="/static/img/pki/windows-1.png" style="max-width: 49%" alt="Windows Import File">
+            <img src="/static/img/pki/windows-2.png" style="max-width: 49%" alt="Windows Connect">
+            <p>Afterwards, you can safely close the window. OpenVPN will keep running in the background and can be accessed at
+                any time from its icon in the system tray in the bottom right corner. From there you can also easily connect
+                and disconnect via the right-click context menu.</p>
+    
+            <h3>macOS</h3>
+            <p>On macOS, you can download <a href="https://openvpn.net/client-connect-vpn-for-mac-os/">OpenVPN Connect for Mac OS</a>.
+                For usage instructions, please refer to the Windows section above.</p>
+            <p>If preferred, you can also use the open-source software <a href="https://tunnelblick.net/" target="_blank">Tunnelblick</a>
+                instead of the official macOS client. For further information, please refer to the Tunnelblick documentation.</p>
+    
+            <h3>Android / iOS</h3>
+            <p>Download OpenVPN Connect from the
+                <a href="https://play.google.com/store/apps/details?id=net.openvpn.openvpn" style="max-width: 100%" target="_blank">Google Play Store</a>
+                or <a href="https://apps.apple.com/us/app/openvpn-connect-openvpn-app/id590379981" style="max-width: 100%" target="_blank">Apple App Store</a>,
+                click the <em>OVPN Profile</em> button (or the little "+" icon at the bottom)
+                and select the *.ovpn file from your phone's storage. After activating the connection
+                for the first time, you have to confirm that OpenVPN may add itself as a VPN to your
+                system. Please note that no two VPNs can run at the same time on both Android and iOS.</p>
+            <img src="/static/img/pki/android.png" alt="Android VPN Connected">
+        </div>
+    </div>
+  </div>
+</main>
