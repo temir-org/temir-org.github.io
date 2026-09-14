@@ -1,25 +1,37 @@
-// Index page
+@use "variables";
 
-#group-logo{
+// Import main Webis layout
+@import url("https://assets.webis.de/css/style.css");
+
+
+// Temir theme
+
+.uk-background-secondary {
+    background-color: variables.$temir-secondary-background !important;
+}
+
+#group-logo {
     font-weight: 100;
     color: white;
 }
 
-#group-logo:hover{
+#group-logo:hover {
     text-decoration: none;
 }
 
-#uni-logo-div{
+
+// Index page styles
+
+#uni-logo-div {
     margin: 80px 220px;
     scale: 2;
 }
 
-.cover-div{
+.cover-div {
     padding: 10px;
 }
 
 .cover-background-fade {
-    //@extend .uk-position-cover;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -45,9 +57,8 @@
     }
 }
 
-@media (min-width: $breakpoint-medium) {
+@media (min-width: variables.$breakpoint-medium) {
     .index-main-cover {
         height: 50vh;
     }
 }
-

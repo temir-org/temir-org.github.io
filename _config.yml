@@ -10,8 +10,6 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Temir
-baseurl: ""
-url: "https://kassel.webis.de"
 
 # Build settings
 markdown: kramdown
@@ -32,5 +30,9 @@ exclude:
   - commons/package.json
   - commons/package-lock.json
 
-plugins:
-  - jekyll-sitemap
+include: [".well-known"]
+
+redirect_from:
+  json: false
+
+url: https://temir.org
