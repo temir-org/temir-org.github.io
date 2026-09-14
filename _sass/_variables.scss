@@ -14,5 +14,19 @@ $global-small-font-size: 0.875rem !default;
 
 $global-secondary-background: #323232 !default;
 
-// Temir theme: header background (University of Kassel red)
-$temir-secondary-background: #b02f2c !default;
+// Temir theme: header, in the corporate colours of the University of Kassel.
+// The link colour has to follow the background, so both are set here together.
+// Contrast of the link colour on the background, WCAG AA wants 4.5:1:
+//
+//   #e8ba75 sand         + #3d3d3d    6.06:1   (current, dark links)
+//   #d1d2d4 light grey   + #3d3d3d    7.18:1   (dark links)
+//   #efa712 Kassel gold  + #3d3d3d    5.28:1   (dark links)
+//   #970b4a dark magenta + 75% white  5.27:1
+//   #053622 dark green   + 75% white  8.22:1
+//   #c92065 bright pink  + #fff       5.42:1   (75% white only 3.59:1)
+//
+// Dimming the links to 75% white and brightening them on hover is what the
+// Webis header does; it only works on the darker half of the palette.
+$temir-secondary-background: #e8ba75 !default;
+$temir-header-color: #3d3d3d !default;
+$temir-header-hover-color: #000 !default;

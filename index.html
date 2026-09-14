@@ -3,24 +3,29 @@ layout: default
 nav_active: index
 title: Temir
 description: Text Mining and Retrieval
+
+# Landing page cover photo. Swap in any file from /img/covers/ and adjust the
+# credit accordingly: staircase, foyer, lecture-hall, corridor, courtyard,
+# solar-roof. Photos from the Medienportal of the University of Kassel.
+cover: /img/covers/staircase.jpg
+cover_credit: "Photo: Sascha Mannel, University of Kassel"
 ---
 
-
-<main class="uk-section uk-padding-remove-top">
-    <div class="uk-container">
-        <div class="uk-text-left uk-padding-small cover-div">
-            <div class="uk-width-large" id="uni-logo-div">
-                <img src="/img/uks-logo-bw.svg" alt="Logo Universität Kassel">
-            </div>
-            <div class="uk-margin-small-top">
-                <h1 class="uk-lead">Deep Semantic Learning</h1>
-                <p>
-                    The Temir group carries out basic and applied research with the goal of developing future information systems. Working at the intersection of natural language processing and information retrieval, our focus is on societal challenges concerning quality and trustworthiness of information. Results are integrated into large-scale information systems, making use of crowdsourcing, data mining, machine learning, high-performance computing, and web technologies.
-                </p>
-                <p><a href="{{ '/research.html' | relative_url }}" class="uk-button uk-button-primary">
-                    Learn More
-                </a></p>
-            </div>
+<main class="index-main-cover" style="background-image: url('{{ page.cover | relative_url }}')">
+    <div class="cover-background-fade"></div>
+    <div class="uk-container uk-light cover-content">
+        <div id="uni-logo-div">
+            <img src="{{ '/img/uks-logo-bw.svg' | relative_url }}" alt="Logo Universität Kassel">
         </div>
+        <h1>Deep Semantic Learning</h1>
+        <p>
+            The Temir group carries out basic and applied research with the goal of developing future information systems. Working at the intersection of natural language processing and information retrieval, our focus is on societal challenges concerning quality and trustworthiness of information. Results are integrated into large-scale information systems, making use of crowdsourcing, data mining, machine learning, high-performance computing, and web technologies.
+        </p>
+        <p><a href="{{ '/research.html' | relative_url }}" class="uk-button uk-button-primary">
+            Learn More
+        </a></p>
     </div>
+    {%- if page.cover_credit %}
+    <div class="cover-credit">{{ page.cover_credit }}</div>
+    {%- endif %}
 </main>

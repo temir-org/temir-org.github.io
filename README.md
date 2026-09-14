@@ -80,6 +80,12 @@ If you need extra (external) CSS files within a page, specify their paths with
 
     additional_css: [ 'file1.css', 'file2.css', '...' ]
 
+The landing page cover is chosen in the front matter of `index.html`. Any file
+from `img/covers/` will do; move the credit along with it:
+
+    cover: /img/covers/staircase.jpg
+    cover_credit: "Photo: Sascha Mannel, University of Kassel"
+
 ## Edit CSS
 CSS is managed via Sass, which is automatically compiled by Jekyll.
 The main SCSS file is located at `css/style.scss`. This file is only there to

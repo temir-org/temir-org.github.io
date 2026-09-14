@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "variables";
 
 // Import main Webis layout
@@ -10,23 +11,113 @@
     background-color: variables.$temir-secondary-background !important;
 }
 
+// The Webis header is dark and carries light navigation; the Temir yellow needs
+// the opposite. The shared stylesheet sets those colours under `.uk-light`, at
+// the same specificity as the rules below, which win by coming later.
+.global-nav {
+    border-bottom-color: color.adjust(variables.$temir-secondary-background, $lightness: -10%);
+
+    .uk-navbar-nav > li > a,
+    .uk-navbar-item,
+    .uk-navbar-toggle,
+    .uk-button,
+    .uk-navbar-nav > li [data-uk-icon] {
+        color: variables.$temir-header-color;
+    }
+
+    .uk-navbar-nav > li:hover > a,
+    .uk-navbar-nav > li > a:hover,
+    .uk-navbar-nav > li > a:focus,
+    .uk-navbar-nav > li > a:active,
+    .uk-navbar-nav > li.uk-active > a,
+    .uk-navbar-nav > li > a[aria-expanded="true"] {
+        color: variables.$temir-header-hover-color;
+    }
+
+    // a light header leaves no brighter colour to hover into, so mark it instead
+    @if variables.$temir-header-hover-color == variables.$temir-header-color {
+        .uk-navbar-nav > li > a:hover,
+        .uk-navbar-nav > li > a:focus {
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+    }
+}
+
 #group-logo {
     font-weight: 100;
-    color: white;
+    color: variables.$temir-header-color;
 }
 
 #group-logo:hover {
+    color: variables.$temir-header-hover-color;
     text-decoration: none;
 }
 
 
-// Index page styles
+// Landing page cover; the photo itself is set per page via the `cover` front
+// matter variable, so it can be swapped without touching these styles.
 
-#uni-logo-div {
-    margin: 80px 220px;
-    scale: 2;
+// The layout wraps the page content in a UIkit height-viewport element, which
+// sizes itself to the viewport minus the navigation and the footer. Letting the
+// cover grow into that space means a tall window shows the whole page without a
+// scrollbar, while a short one falls back to the minimum height below.
+[data-uk-height-viewport]:has(> .index-main-cover) {
+    display: flex;
+    flex-direction: column;
 }
 
-.cover-div {
-    padding: 10px;
+.index-main-cover {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    align-items: flex-end;
+    min-height: 26rem;
+    background-color: variables.$global-secondary-background;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cover-background-fade {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.35) 35%, rgba(0, 0, 0, 0.75) 100%);
+}
+
+.cover-content {
+    position: relative; // keep the text above the gradient
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    h1 {
+        font-size: 2.65rem;
+    }
+
+    p {
+        max-width: 48rem;
+    }
+}
+
+#uni-logo-div img {
+    width: 320px;
+    max-width: 100%;
+    filter: brightness(0) invert(1); // the Kassel logo is black, the cover is not
+}
+
+.cover-credit {
+    position: absolute;
+    right: 0.75rem;
+    bottom: 0.4rem;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.7rem;
+}
+
+@media (min-width: variables.$breakpoint-medium) {
+    .index-main-cover {
+        min-height: 30rem;
+    }
 }
