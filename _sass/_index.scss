@@ -30,35 +30,3 @@
 .cover-div {
     padding: 10px;
 }
-
-.cover-background-fade {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.6) 90%);
-}
-
-.copyright-impressum {
-    z-index: 1;
-    position: relative;
-}
-
-@media (max-width: 400px) {
-    .index-main-cover {
-        height: 550px;
-    }
-}
-
-@media (max-width: 300px) {
-    .index-main-cover {
-        height: 600px;
-    }
-}
-
-@media (min-width: variables.$breakpoint-medium) {
-    .index-main-cover {
-        height: 50vh;
-    }
-}
