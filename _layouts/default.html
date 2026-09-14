@@ -6,7 +6,9 @@
     <meta name="description" content="{{ page.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="copyright" content="&copy; {{site.time | date: '%Y'}} Temir">
-    <link rel="icon" type="image/x-icon" href="{{ '/img/uks-favicon.ico' | relative_url }}">
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="48x48">
+    <link rel="icon" type="image/svg+xml" href="{{ '/img/favicon.svg' | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ '/img/apple-touch-icon.png' | relative_url }}">
     <link rel="canonical" href="{{ page.url }}">
 
     <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}?{{site.time | date: '%s'}}">
@@ -59,7 +61,7 @@
         <div class="uk-navbar-left">
             <ul class="uk-navbar-nav">
                 <li{% if page.nav_active == "index" %} class="uk-active"{% endif %}>
-                    <a href="{{ '/' | relative_url }}" id="group-logo">TEMIR</a>
+                    <a href="{{ '/' | relative_url }}" id="group-logo"><img src="{{ '/img/favicon.svg' | relative_url }}" alt="Temir logo" class="uk-logo"> TEMIR</a>
                 </li>
             </ul>
         </div>
