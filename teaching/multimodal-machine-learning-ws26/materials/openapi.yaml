@@ -1,0 +1,168 @@
+openapi: 3.0.3
+info:
+  title: Image Classification API (Adversarial Attacks Course Project)
+  version: 1.0.0
+  description: |
+    Every group implements this API. Services are served via HTTP (no TLS,
+    routes at root), started with
+    `uv run server.py --port 8000 --weights-dir ./weights`.
+    Identical requests must yield identical responses.
+    Probabilities must not be rounded.
+
+    CORS: every response, including errors, carries
+    `Access-Control-Allow-Origin: *`. Preflight requests (OPTIONS on /predict
+    and /info) are answered with 200 or 204 and the headers
+    `Access-Control-Allow-Origin: *`,
+    `Access-Control-Allow-Methods: GET, POST, OPTIONS`,
+    `Access-Control-Allow-Headers: Content-Type`.
+
+    See api-specification.md for the full human-readable specification.
+
+paths:
+  /predict:
+    post:
+      summary: Classify an image into free-text classes and fixed emotions
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PredictRequest'
+      responses:
+        '200':
+          description: Prediction
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PredictResponse'
+        '400':
+          description: >
+            Malformed JSON, missing field, invalid base64, not a PNG,
+            empty or duplicate class strings, or more than 50 classes.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '413':
+          description: Image larger than 1024x1024 px or body larger than 10 MB.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /info:
+    get:
+      summary: Service metadata
+      responses:
+        '200':
+          description: Metadata
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Info'
+
+components:
+  schemas:
+    PredictRequest:
+      type: object
+      required: [image, classes]
+      additionalProperties: false
+      properties:
+        image:
+          type: string
+          format: byte
+          description: >
+            Base64 (RFC 4648, no data-URI prefix) of a PNG image, between 1x1
+            and 1024x1024 px. Clients should send 8-bit RGB. Servers must accept
+            any valid PNG (grayscale, palette, 16-bit, with or without alpha)
+            and convert it to RGB themselves; alpha is ignored. Resizing and
+            normalization happen server-side.
+        classes:
+          type: array
+          minItems: 0
+          maxItems: 50
+          uniqueItems: true
+          description: Free-text class names, case-sensitive.
+          items:
+            type: string
+            minLength: 1
+            maxLength: 200
+      example:
+        image: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP4z8AAAAMBAQDJ/pLvAAAAAElFTkSuQmCC
+        classes: [cat, dog, a person at a desk]
+
+    PredictResponse:
+      type: object
+      required: [classes, emotions]
+      additionalProperties: false
+      properties:
+        classes:
+          type: object
+          description: >
+            Exactly one key per requested class (as sent). Values in [0, 1]
+            summing to 1 (+-1e-6). Empty object if no classes were requested.
+          additionalProperties:
+            $ref: '#/components/schemas/Probability'
+        emotions:
+          $ref: '#/components/schemas/Emotions'
+      example:
+        classes: {cat: 0.71, dog: 0.22, a person at a desk: 0.07}
+        emotions: {anger: 0.02, disgust: 0.01, fear: 0.03, happiness: 0.81,
+                   sadness: 0.04, surprise: 0.05, neutral: 0.04}
+
+    Emotions:
+      type: object
+      description: >
+        Always all seven keys. Values in [0, 1] summing to 1 (+-1e-6).
+      required: [anger, disgust, fear, happiness, sadness, surprise, neutral]
+      additionalProperties: false
+      properties:
+        anger:     {$ref: '#/components/schemas/Probability'}
+        disgust:   {$ref: '#/components/schemas/Probability'}
+        fear:      {$ref: '#/components/schemas/Probability'}
+        happiness: {$ref: '#/components/schemas/Probability'}
+        sadness:   {$ref: '#/components/schemas/Probability'}
+        surprise:  {$ref: '#/components/schemas/Probability'}
+        neutral:   {$ref: '#/components/schemas/Probability'}
+
+    Probability:
+      type: number
+      format: double
+      minimum: 0
+      maximum: 1
+
+    Info:
+      type: object
+      required: [team, model_version, max_image_size, max_classes]
+      additionalProperties: false
+      properties:
+        team:
+          type: string
+          example: team-03
+        model_version:
+          type: string
+          description: Identifier of the deployed model (e.g. git commit hash).
+          example: a1b2c3d
+        max_image_size:
+          type: array
+          items: {type: integer}
+          minItems: 2
+          maxItems: 2
+          example: [1024, 1024]
+        max_classes:
+          type: integer
+          example: 50
+
+    Error:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Human-readable error message.
